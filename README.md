@@ -1,4 +1,4 @@
-# Game_Solvers
+# Game_Solvers[^1]
 Solving strategy and logic games using AI
 
 ## Classic Search: 8-Puzzle
@@ -149,3 +149,5 @@ Use First Order Logic in the form of prolog programs in order to represent knowl
 
 Build the program online at: https://swish.swi-prolog.org/ .
 
+
+[^1]: Problem sets and partial codes are from UMN Fall 2020 CSCI 5511 course material
