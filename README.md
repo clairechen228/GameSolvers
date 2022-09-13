@@ -4,59 +4,51 @@ Solving strategy and logic games using AI
 ## Classic Search: 8-Puzzle
 The 8-Puzzle is a type of sliding tile puzzle consisting of a 3x3 grid of numbered tiles, with one tile (#9) missing. The object of the puzzle is to get the tiles in a particular order, subject to the constraints of physically sliding one tile at a time into the open space.
 
-The program takes one command-line argument: the initial state
-The following state is our goal
+This program takes one command-line argument, the initial state, and returns the solution and time taken for each algorithm. The goal is to get the tiles in the following order
 
 | 1 | 2 | 3 |
 | - | - | - |
 | 8 | . | 4 |
 | 7 | 6 | 5 |
 
+**Algorithms:**
 - Uninformed Search: Depth-First Search, Depth-Limited Search, Iterative Deepening
 - Informed Search: Heuristics, A* Search
 
-The program returns the solution and time taken for each algorithm. 
-
-
+**Results**
 
 ## Classic Search: 8-Queens Problem
 This is the problem of placing eight chess queens on an 8×8 chessboard so that no two queens threaten each other; thus, a solution requires that no two queens share the same row, column, or diagonal. 
 
+This program generates a large number of random initial states and runs each of the algorithms on those states. It takes one integer input as the number of random intial states, and returns the average number of steps overall for each of the algorithms to find a solution.
 
+**Algorithms:**
 - Hill climbing with steepest-ascent
 - First-choice hill climbing
 - Simulated annealing 
 
-Generate a large number of random initial states and run each of the algorithms on those states. Calculate the average number of steps overall for each of the algorithms to find a solution.
+**Results**
 
-Testing:
-
-`python 8-Queens.py 2000`
-
-input: 2000 => generate 2000 random initial states)
+`8-Queens.py 2000`       
 
 > The average number of steps:
-
-> Hill climbing with steepest-ascent(step/percent of sucess): 3.9764309764309766 / 14.85
-
-> First-choice hill climbing(step/percent of sucess): 41.23354321694333 / 87.35000000000001
-
+> 
+> Hill climbing with steepest-ascent(step/percent of sucess): 3.98 / 14.85
+> 
+> First-choice hill climbing(step/percent of sucess): 41.23 / 87.35
+> 
 > Simulated annealing(step/percent of sucess): 93.0 / 8.15
 
-
-
 ## Adversarial Search: Othello
-
 Othello, also known by its non-trademark name reversi, is a strategy game for two players.
 
-- Create a **MinimaxPlayer** class that implements the minimax search algorithm to decide its moves.
-- Create an **AlphabetaPlayer** class that implements minimax search with alpha-beta pruning to decide its moves.
+**Algorithms:**
+- Create a MinimaxPlayer class that implements the **minimax search algorithm** to decide its moves.
+- Create an AlphabetaPlayer class that implements **minimax search with alpha-beta pruning** to decide its moves.
 
-default parameters:
-number of games = 10 
-depth limit = 5
+default parameters: number of games = 10, depth limit = 5
 
-Testing:
+**Results:**
 
 Minimax Agent: `python3 othello.py Minimax`
 
@@ -119,7 +111,8 @@ Alpha-Beta Agent: `python3 othello.py AB`
 
    Figure out who is who.
 
-Answers:
+**Results:**
+
 > Cal is/are (a) a truth-teller(s)
 
 > Amy is/are (a) a truth-teller(s)
@@ -131,7 +124,7 @@ Answers:
 
 ## Propositional Logic: Clue Game Reasoner
 
-Use propositional logic and a satisfiability reasoning tool to solve a a game of clue.
+Use propositional logic and a SAT solver to solve Clue.
 
 The main basis of the game is deduction
 
@@ -147,7 +140,7 @@ The main basis of the game is deduction
 
 Use First Order Logic in the form of prolog programs in order to represent knowledge.
 
-Build the program online at: https://swish.swi-prolog.org/ .
+Built the program online at: https://swish.swi-prolog.org/ .
 
 
 [^1]: Problem sets and partial codes are from UMN Fall 2020 CSCI 5511 course material
